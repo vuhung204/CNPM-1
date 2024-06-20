@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THANH LÝ</title>
+    <title>Chi tiết hợp đồng</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
@@ -240,72 +240,106 @@ table td {
         </div>
         <div class="form-container">
             
-            <h2 >THÔNG TIN</h2>
+            <h2 >SỬA CHỮA </h2>
             <form> 
                 <div class="form-group">
-                    <label for="nhaCungCap">Nhà cung cấp</label>
-                    <input type="text" id="nhaCungCap" name="nhaCungCap" >
+                    <label for="ma-tai-san">Mã tài sản</label>
+                    <input type="text" id="ma-tai-san" name="ma-tai-san">
                 </div>
                 <div class="form-group">
-                    <label for="soHopDong">Số hợp đồng</label>
-                    <input type="text" id="soHopDong" name="soHopDong" >
+                    <label for="ten-tai-san">Tên tài sản</label>
+                    <input type="text" id="ten-tai-san" name="ten-tai-san">
                 </div>
                 <div class="form-group">
-                    <label for="ngayThanhLy">Ngày thanh lý</label>
-                    <input type="date" id="ngayThanhLy" name="ngayThanhLy" >
+                    <label for="nha-cung-cap">Nhà cung cấp</label>
+                    <input type="text" id="nha-cung-cap" name="nha-cung-cap">
                 </div>
                 <div class="form-group">
-                    <label for="tongsothietbi">Tổng số thiết bị</label>
-                    <input type="number" id="tongsothietbi" name="tongsothietbi" >
+                    <label for="serial-number">Số điện thoại</label>
+                    <input type="text" id="serial-number" name="serial-number">
                 </div>
                 <div class="form-group">
-                    <label for="tonggiatrithanhly">Tổng giá trị thanh lý</label>
-                    <input type="text" id="tonggiatrithanhly" name="tonggiatrithanhly" value="0.0">
-                </div> 
-                <div class="form-group">
-                    <label for="Owner">Owner</label>
-                    <input type="text " id="Owner " name="Owner">
+                    <label for="trang-thai">Trạng thái</label>
+                    <input type="text" id="trang-thai" name="trang-thai">
+              
                 </div>
                 <div class="form-group">
-                    <label for="quyenxem">Quyền xem</label>
-                    <select id="quyenxem" name="quyenxem">
-                        <option value="admin">admin</option>
-                        <option value="admin">Phòng ban</option>
-                        <option value="admin">Phòng hành chính</option>
-                    </select>
+                    <label for="ngay-mua">Ngày mua</label>
+                    <input type="date" id="ngay-mua" name="ngay-mua">
                 </div>
-            
                 <div class="form-group">
-                    <label for="quyenSua">Quyền sửa</label>
-                    <select id="quyenSua" name="quyenSua">
-                        <option value="admin">admin</option>
-                    </select>
-                </div>
+                    <label for="ngay-het-bao-hanh">Ngày hết bảo hành</label>
+                    <input type="date" id="ngay-het-bao-hanh" name="ngay-het-bao-hanh">
+                </div>               
+            <div class="form-group full-width">
+                <label for="mo-ta">Mô tả</label>
+                <textarea id="mo-ta"></textarea>
+            </div>
                 <button type="submit" class="update-button">Thêm mới</button>
             </form>
         </div>
         <div class="table-container">
-            <h2>Thanh lý</h2>
+            <h2>Sửa Chữa</h2>
             <table>
                 <thead>
                     <tr>
+                        <th>Mã tài sản</th>
+                        <th>Tên tài sản</th>
                         <th>Nhà cung cấp</th>
-                        <th>Số hợp đồng</th>
-                        <th>Ngày thanh lý</th>
-                        <th>Tổng số thiết bị</th>
-                        <th>Tổng giá trị thanh lý</th>
-                        <th>Owner</th>
+                        <th>Số điện thoại</th>
+                        <th>Trạng thái</th>
+                        <th>Ngày mua</th>
+                        <th>Ngày hết bảo hành</th>
+                        <th>Mô tả</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>MC001</td>
+                        <td>Máy chiếu</td>
                         <td>Thỏ bảy màu</td>
-                        <td>28</td>
-                        <td>20-09-2016</td>
-                        <td>200</td>
-                        <td>0.00</td>
-                        <td>admin</td>
+                        <td>0988166254</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2021</td>
+                        <td>16/5/2025</td>
+                        <td>    </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>MC002</td>
+                        <td>Máy chiếu</td>
+                        <td>Thỏ bảy màu</td>
+                        <td>0988166254</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2023</td>
+                        <td>16/5/2028</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>BN001</td>
+                        <td>Bàn dài</td>
+                        <td>HUNGDADEN</td>
+                        <td>0967888159</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2023</td>
+                        <td>16/5/2025</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>BD001</td>
+                        <td>BÓNG ĐÈN</td>
+                        <td>Công ty cung cấp bóng đèn </td>
+                        <td>0922366451</td>
+                        <td>Đã bị hỏng</td>
+                        <td>16/5/2020</td>
+                        <td>16/5/2025</td>
+                        <td>    </td>
                     </tr>
                 </tbody>
             </table>

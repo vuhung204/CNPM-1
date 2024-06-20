@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Quản Lý Tài Sản</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+        }
+
+        .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.sidebar .profile p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    background-color: #34495e;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+        .content {
+            padding: 17rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .content h1 {
+            margin-top: -260px;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .actions i {
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .form-container form .form-group {
+            flex: 1 1 50%;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .form-container form .form-group.full-width {
+            flex: 1 1 100%;
+        }
+
+        .form-container form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container form input, 
+        .form-container form textarea, 
+        .form-container form select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-container form button {
+            padding: 10px 20px;
+            margin: 10px 10px 0 0;
+            cursor: pointer;
+        }
+
+        .btn{
+        text-decoration: none;
+        color: white;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <img src="img/user.png" alt="Profile Picture">
+            <h3>Tên Người Dùng</h3>
+            <p>Online</p>
+        </div>
+        <ul>
+            <li><i class="fas fa-list"></i><a class="btn" href="danhsach.html">Danh sách tài sản</a></li>
+            <li><i class="fa fa-object-group"></i><a class="btn" href="phanloai.html">Phân loại</a></li>
+            <li><i class="fa fa-shopping-cart"></i><a class="btn" href="mua.html">Mua Thiết Bị</a></li>
+            <li><i class="fa fa-wrench"></i><a class="btn" href="suachua.html">Sửa chữa</a></li>
+            <li><i class="fas fa-file-contract"></i><a class="btn" href="thanhly.html">Thanh Lý</a></li>
+            <li><i class="fas fa-building"></i><a class="btn" href="baocao.html">Báo Cáo Định Kỳ</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>MUA SẢN PHẨM</h1>
+        <form class="asset-form">            
+        </form>
+        <div class="form-container">
+            <form>
+                    <div class="form-group">
+                        <label for="ma-tai-san">Mã tài sản</label>
+                        <input type="text" id="ma-tai-san" name="ma-tai-san">
+                    </div>
+                    <div class="form-group">
+                        <label for="ten-tai-san">Tên tài sản</label>
+                        <input type="text" id="ten-tai-san" name="ten-tai-san">
+                    </div>
+                    <div class="form-group">
+                        <label for="nha-cung-cap">Nhà cung cấp</label>
+                        <input type="text" id="nha-cung-cap" name="nha-cung-cap">
+                    </div>
+                    <div class="form-group">
+                        <label for="serial-number">Phone number</label>
+                        <input type="text" id="serial-number" name="serial-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="trang-thai">Trạng thái</label>
+                        <select id="trang-thai" name="trang-thai">
+                            <option value="">Mới</option>
+                            <option value="">Cũ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ngay-mua">Ngày mua</label>
+                        <input type="date" id="ngay-mua" name="ngay-mua">
+                    </div>
+                    <div class="form-group">
+                        <label for="ngay-het-bao-hanh">Ngày hết bảo hành</label>
+                        <input type="date" id="ngay-het-bao-hanh" name="ngay-het-bao-hanh">
+                    </div>               
+                <div class="form-group full-width">
+                    <label for="mo-ta">Mô tả</label>
+                    <textarea id="mo-ta"></textarea>
+                </div>
+                <div class="btn-addsp">
+                    <Button>MUA</Button>
+                </div>
+
